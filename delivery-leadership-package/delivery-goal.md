@@ -1,10 +1,9 @@
 # Delivery Goal: Evergreen Quote
-
-> Copy this file into `delivery-leadership-package/delivery-goal.md`. One sentence. Read it back to yourself. Then to your pair. Then to someone who wasn't in the room. If they can repeat it, it's good.
+One sentence. Read it back to yourself. Then to your pair. Then to someone who wasn't in the room. If they can repeat it, it's good.
 
 ## Goal
+A functional Evergreen Quote application is launched after a green CI build and merged PR, including connected marketing page, React app, API with database, and scaling provided by containerization.
 
-> _One sentence here._
 
 ## "Done" looks like
 
@@ -17,5 +16,5 @@
 - `delivery-leadership-package/` is complete and committed.
 
 ## Out of scope (this week)
-
-- _What you are intentionally not doing._
+- No authentication, no payments, no real rate engine.
+- No AWS Account with actual spend - this work is done locally.

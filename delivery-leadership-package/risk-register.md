@@ -5,7 +5,7 @@
 | # | Risk | Owner | Likelihood (L/M/H) | Impact (L/M/H) | Mitigation | Trigger to escalate |
 |---|---|---|---|---|---|---|
 | R1 | _e.g., the page renders while the client/API contract is quietly wrong, so the demo "works" until a field goes missing_ | _name_ | M | H | _e.g., run `npm run type-check` and `npm test` after every wiring step, not just before merge_ | _e.g., either check still red at 16:00 → hold the push, name it at check-in_ |
-| R2 |  |  |  |  |  |  |
+| R2 | The client site quote list does not match the API's database records | Dev Team | M | M | ?? | There's a mismatch when the page is loaded and checked against the database |
 | R3 |  |  |  |  |  |  |
 | R4 |  |  |  |  |  |  |
 | R5 |  |  |  |  |  |  |
