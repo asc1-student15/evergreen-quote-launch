@@ -6,7 +6,7 @@ Target length: 1 page (~300 words). Write for a Liberty Mutual VP who has 90 sec
 **Delivery week:** Final
 **Delivery Lead:** Tina Matthys
 **Engineering team (represented by):** https://github.com/asc1-student15/evergreen-quote-launch
-**GitHub Project board:** _link_
+**GitHub Project board:** https://github.com/users/asc1-student15/projects/4/views/1
 
 ## Who is the customer?
 There are several 'customers' that will benefit from this launch. Externally served is the young adult seeking insurance for the first time, with no prior knowledge or patience for long processes or logging in. They want a fast quote on their phone with a premium they can trust and no strings attached. Internally we have a partner team that will use GraphQL to filter quotes using their specialized field values, along with an ops team who will have the service orchestrated and running with Kubernetes. In addition, we also invite our management teams to act as an audience to the completion of this full launch initiative.

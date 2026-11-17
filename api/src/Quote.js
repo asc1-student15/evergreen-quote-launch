@@ -7,7 +7,7 @@ import { randomUUID } from "node:crypto";
 const quoteSchema = new mongoose.Schema(
   {
     _id: { type: String, default: () => randomUUID() },
-    type: { type: String, required: true, enum: ["auto", "home", "life"] },
+    type: { type: String, required: true, enum: ["auto", "home", "life", "renters"] },
     age: { type: Number, required: true, min: 18, max: 100 },
     coverageAmount: { type: Number, required: true, min: 10000 },
     monthlyPremium: { type: Number, required: true },
