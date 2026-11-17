@@ -7,7 +7,7 @@ import { calculatePremium } from "../premium";
 import type { CoverageType } from "../types";
 
 export function useQuoteEstimate() {
-  const [type, setType] = useState<CoverageType>("auto");
+  const [type, setType] = useState<CoverageType>("life");
   const [age, setAge] = useState(35);
   const [coverageAmount, setCoverageAmount] = useState(50000);
 

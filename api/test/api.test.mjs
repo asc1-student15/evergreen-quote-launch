@@ -78,6 +78,18 @@ test("POST /api/quote computes the premium with the shared rate table", async ()
   assert.equal(quote.monthlyPremium, calculatePremium("auto", 35, 50000));
 });
 
+test("POST /api/quote computes Renters coverage premium", async () => {
+  const res = await fetch(`${base}/api/quote`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ type: "renters", age: 35, coverageAmount: 50000 }),
+  });
+  assert.equal(res.status, 201);
+  const quote = await res.json();
+  assert.equal(quote.type, "renters");
+  assert.equal(quote.monthlyPremium, calculatePremium("renters", 35, 50000));
+});
+
 test("POST /api/quote rejects an age below 18 with a 400", async () => {
   const res = await fetch(`${base}/api/quote`, {
     method: "POST",

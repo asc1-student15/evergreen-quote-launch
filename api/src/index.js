@@ -35,5 +35,5 @@ app.use((err, req, res, next) => {
 
 await connectDB();
 app.listen(PORT, () => {
-  console.log(`${process.env.SERVICE_NAME ?? "CHANGEME"} on http://localhost:${PORT}`);
+  console.log(`${process.env.SERVICE_NAME ?? "http://localhost:5173"} on http://localhost:${PORT}`);
 });

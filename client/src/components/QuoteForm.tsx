@@ -43,9 +43,9 @@ function QuoteForm() {
         value={type}
         onChange={(e) => setType(e.target.value as typeof type)}
       >
+        <option value="life">Life</option>
         <option value="auto">Auto</option>
         <option value="home">Home</option>
-        <option value="life">Life</option>
         <option value="renters">Renters</option>
       </select>
 
