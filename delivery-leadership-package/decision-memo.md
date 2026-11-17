@@ -1,29 +1,24 @@
-# Decision Memo: _short title here_
+# Decision Memo: Duplicate Premium Retrieval
+Target length: ~250 words. Write for a non-technical reader. Name the options you **rejected**, not just the one you picked.
 
-> Copy to `delivery-leadership-package/decision-memo.md`. Target length: ~250 words. Write for a non-technical reader. Name the options you **rejected**, not just the one you picked.
-
-**Date:**
-**Author:** _your name_
-**Decision area:** _e.g., Day 2 scope tradeoff_
+**Date:** 11/17/26
+**Author:** Tina Matthys
+**Decision area:** Premium Calculations are duplicated in the Client and API
 
 ## Context
-
-_What was the situation that forced a choice? 2–3 sentences._
+The premium calculations for the application live in two places, the Client and the API. Updates would need to be made in both places to keep the quotes to the customer consistent.
 
 ## Options considered
 
-1. **Option A: _name_.** _Pros / cons in plain English._
-2. **Option B: _name_.** _Pros / cons._
-3. **Option C: _name_.** _Pros / cons._ (Optional.)
+1. **Option A: Revert to prior code where only the Client holds the calculation - DECLINED.** 
+This would allow the user to instantly create a quote, but we would lose the opportunity to save it.
+2. **Option B: Revert to prior code where only the API holds the calculation - DECLINED.**
+This would allow only a backend user with access to the DB the opportunity to save quotes.
+3. **Option C: Keep updated premium calculations synced between Cient and API - ACCEPTED.**
+This allows both customers and back end users access to the same quoting strategy and functionality. Keeping everything up to date is a little more effort, but it will be worth the extra time and network calls.
 
-## Recommendation
-
-_Which option. One paragraph._
-
-## Why
-
-_The single most important reason, named in customer or business terms, not technical ones._
+## Recommendation and Why
+Option C was accepted so that all user types operate off the same premium calculations and are able to retrieve consistent quotes after saving.
 
 ## What would change my mind
-
-_If X happened by Y date, I would revisit this._
+If a defect was found with an inconsistency between the Client and API code, it would need to be mitigated before release.
