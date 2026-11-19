@@ -8,7 +8,7 @@
   --evg-green-soft: #e6f0ea;
   --evg-ink: #1f2a2e;
   --evg-muted: #6a7a72;
-  --evg-amber: #b45309;
+  --evg-amber: #13beca;
 }
 
 * { box-sizing: border-box; }
@@ -116,4 +116,11 @@ body {
   .site-header { flex-direction: column; gap: 10px; }
   .hero { padding: 48px 20px; }
   .hero h1 { font-size: 1.8rem; }
+}
+
+.nav-badge {
+  background: var(--evg-amber);
+  color: #ffffff;
+  padding: 2px 10px;
+  border-radius: 999px;
 }

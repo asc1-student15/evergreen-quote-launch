@@ -1,6 +1,4 @@
-// src/premium.js - the premium math (provided).
-// CONFIG: BASE_RATES values only - apply the sponsor's Monday rate decision (Day 2).
-const BASE_RATES = { auto: 90, home: 135, life: 70 };
+const BASE_RATES = { auto: 90, home: 135, life: 70, renters: 40 };
 
 export function calculatePremium(type, age, coverageAmount) {
   const base = BASE_RATES[type] ?? 100;
